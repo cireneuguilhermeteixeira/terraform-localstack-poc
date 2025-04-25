@@ -1,0 +1,2 @@
+testcontainers[postgresql]
+psycopg2-binary
