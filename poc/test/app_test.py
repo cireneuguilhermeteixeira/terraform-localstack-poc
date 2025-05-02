@@ -2,7 +2,7 @@ from testcontainers.core.container import DockerContainer
 import boto3
 import time
 
-def test_dynamodb_com_localstack():
+def test_dynamodb_with_localstack():
     # Get LocalStack up and running with just DynamoDB
     with DockerContainer("localstack/localstack:latest") \
         .with_exposed_ports(4566) \
@@ -40,7 +40,7 @@ def test_dynamodb_com_localstack():
 
         # Get a item
         resp = dynamodb.get_item(
-            TableName="TesteTabela",
+            TableName="TestTable",
             Key={"id": {"S": "123"}}
         )
 

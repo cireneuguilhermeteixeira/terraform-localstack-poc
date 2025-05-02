@@ -25,7 +25,7 @@ resource "aws_dynamodb_table" "example_table" {
 
 # Simulating Role
 resource "aws_iam_role" "app_role" {
-  name = "MinhaAppRole"
+  name = "MyAppRole"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
